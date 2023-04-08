@@ -1,7 +1,7 @@
 package com.fyp.covidhelper.Repository;
 
-import com.fyp.covidhelper.Model.Buildings;
+import com.fyp.covidhelper.Entity.LogRef;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface BuildingsRepository extends JpaRepository<Buildings,String> {
+public interface LogRefRepository extends JpaRepository<LogRef,String> {
 }

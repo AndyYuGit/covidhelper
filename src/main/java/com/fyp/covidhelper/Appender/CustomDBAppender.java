@@ -1,7 +1,5 @@
 package com.fyp.covidhelper.Appender;
 
-import static ch.qos.logback.core.db.DBHelper.closeStatement;
-
 import java.lang.reflect.Method;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,20 +7,15 @@ import java.sql.SQLException;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
 
 
 import ch.qos.logback.classic.db.DBAppender;
 import ch.qos.logback.classic.db.DBHelper;
 import ch.qos.logback.classic.db.names.DBNameResolver;
 import ch.qos.logback.classic.spi.*;
-import ch.qos.logback.core.CoreConstants;
-import ch.qos.logback.core.db.DBAppenderBase;
 
 
-public class CustomDBAppender3 extends DBAppender {
+public class CustomDBAppender extends DBAppender {
 
     protected String insertPropertiesSQL;
     protected String insertExceptionSQL;

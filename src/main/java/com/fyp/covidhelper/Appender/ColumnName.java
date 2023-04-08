@@ -1,2 +1,13 @@
-package com.fyp.covidhelper.Appender;public enum ColumnName {
+package com.fyp.covidhelper.Appender;
+
+public enum ColumnName {
+
+    EVENT_ID,
+
+    DATETIME, FORMATTED_MESSAGE, LOGGER_NAME, LEVEL_STRING, THREAD_NAME, REFERENCE_FLAG, DEVICE_ID, MODEL, OS_VERSION, APP_VERSION, CALLER_FILENAME, CALLER_CLASS, CALLER_METHOD, CALLER_LINE,
+
+    // MDC
+    MAPPED_KEY, MAPPED_VALUE,
+
+    I, TRACE_LINE;
 }

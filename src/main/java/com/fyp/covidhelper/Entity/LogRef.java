@@ -1,14 +1,12 @@
-package com.fyp.covidhelper.Model;
+package com.fyp.covidhelper.Entity;
 
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Entity
 @Table(name = "logref", schema = "covidhelper")
 public class LogRef {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
     private String id;
 
     private String ref_desc;

@@ -1,15 +1,14 @@
-package com.fyp.covidhelper.Model;
+package com.fyp.covidhelper.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Log {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    private String log_id;
+
     private String log_desc;
 
     private LocalDateTime log_time;
@@ -17,6 +16,14 @@ public abstract class Log {
     private String log_devicename;
 
     private String log_osversion;
+
+    public String getLog_id() {
+        return log_id;
+    }
+
+    public void setLog_id(String log_id) {
+        this.log_id = log_id;
+    }
 
     public String getLog_desc() {
         return log_desc;
